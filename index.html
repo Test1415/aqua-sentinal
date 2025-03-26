@@ -7,15 +7,13 @@
     <meta name="keywords" content="water management, IoT monitoring, leak detection, smart water systems, sustainability">
     <title>Aqua Sentinel - Intelligent Water Management</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             color: #333;
-            scroll-behavior: smooth;
         }
         .container {
             max-width: 1200px;
@@ -23,189 +21,62 @@
             padding: 20px;
         }
         header {
-            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1517590113470-03a0d244b3a3?ixid=M3wzNjM5Nzd8MHwxfHNlYXJjaHwxfHdhdGVyJTIwY29udHJvbHxlbnwwfHx8fDE3MTc3NDY0NjJ8MA&ixlib=rb-4.0.3&w=1000');
-            background-size: cover;
-            background-position: center;
+            background: #2c3e50;
+            color: white;
             padding: 20px 0;
         }
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
         }
         nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #3498db;
         }
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1517590113470-03a0d244b3a3?ixid=M3wzNjM5Nzd8MHwxfHNlYXJjaHwxfHdhdGVyJTIwY29udHJvbHxlbnwwfHx8fDE3MTc3NDY0NjJ8MA&ixlib=rb-4.0.3&w=1000');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 150px 20px;
-            text-align: center;
-            text-shadow: 0 0 10px rgba(0,0,0,0.3);
-        }
-        .hero h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 1.3em;
-            margin-bottom: 30px;
-        }
-        .cta-button {
             background: #3498db;
             color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s ease;
+            padding: 100px 20px;
+            text-align: center;
         }
-        .cta-button:hover {
-            background: #2980b9;
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
         }
-
-        .about {
-            padding: 80px 0;
-            background: #f8f9fa;
+        .hero p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .services, .about, .target-market, .revenue-model {
+            padding: 40px 0;
         }
         .service-item {
             display: flex;
             align-items: center;
-            margin: 30px 0;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            margin: 20px 0;
         }
-        .service-item:hover {
-            transform: translateY(-5px);
-        }
-        .service-item img {
-            width: 150px;
-            height: 150px;
-            margin-right: 25px;
-            border-radius: 8px;
-        }
-        .service-item h3 {
-            margin: 0;
-            font-size: 1.2em;
-        }
-
-        .target-market {
-            padding: 80px 0;
-            background: #e9f5ff;
-        }
-        .market-types {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .market-type {
-            flex: 1 1 30%;
-            text-align: center;
-            padding: 20px;
-            margin: 15px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .market-type:hover {
-            transform: translateY(-5px);
-        }
-        .market-type img {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 15px;
-        }
-
-        .revenue-model {
-            padding: 80px 0;
-            background: #f8f9fa;
-        }
-        .revenue-model ul {
-            list-style: none;
-            padding: 0;
-        }
-        .revenue-model li {
-            background: #3498db;
-            color: white;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            text-align: center;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-        .revenue-model li:hover {
-            background: #2980b9;
-        }
-
-        .contact {
-            padding: 80px 0;
-            background: #e9f5ff;
-            text-align: center;
-        }
-        .contact form {
-            max-width: 600px;
-            margin: auto;
-        }
-        .contact input, .contact textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        .contact button {
-            background: #3498db;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        .contact button:hover {
-            background: #2980b9;
-        }
-
-        .footer {
-            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9));
-            color: white;
-            padding: 30px;
-            text-align: center;
-            margin-top: 80px;
-        }
-        .footer a {
+        .service-item i {
+            font-size: 2em;
+            margin-right: 20px;
             color: #3498db;
-            text-decoration: none;
-            margin: 0 15px;
         }
-
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
         @media (max-width: 768px) {
-            .hero {
-                padding: 100px 20px;
+            nav {
+                flex-direction: column;
+                text-align: center;
             }
             .hero h1 {
-                font-size: 2.5em;
-            }
-            .market-type {
-                flex: 100%;
-                margin: 10px 0;
+                font-size: 2em;
             }
         }
     </style>
@@ -218,7 +89,7 @@
                 <div>
                     <a href="#about">About</a>
                     <a href="#services">Services</a>
-                    <a href="#markets">Markets</a>
+                    <a href="#solutions">Solutions</a>
                     <a href="#contact">Contact</a>
                 </div>
             </nav>
@@ -228,7 +99,7 @@
     <section class="hero">
         <div class="container">
             <h1>Smart Water Management for a Sustainable Future</h1>
-            <p>Protect your water infrastructure with real-time monitoring solutions</p>
+            <p>Comprehensive monitoring solutions for homes, businesses, and governments</p>
             <a href="#contact" class="cta-button">Get Started</a>
         </div>
     </section>
@@ -237,78 +108,74 @@
         <h2>What We Do</h2>
         <p>Aqua Sentinel provides intelligent water system monitoring to minimize water loss and infrastructure damage through:</p>
         <div class="service-item">
-            <img src="https://images.unsplash.com/photo-1613302220101-3f8a2e9a1d7f?ixid=M3wzNjM5Nzd8MHwxfHNlYXJjaHwxfHxjaWxsJTIwYnklMjBtb25pdG9yeXxlbnwwfHx8fDE3MTc3NDY1NzR8MA&ixlib=rb-4.0.3&w=1000" alt="Sensor network"[[6]]>
+            <i class="fas fa-tint"></i>
             <div>
-                <h3>IoT Sensor Networks</h3>
-                <p>Real-time leak detection and pressure monitoring for pipelines</p>
+                <h3>Sensor Systems</h3>
+                <p>Real-time monitoring of water flow and pipe pressure for leak detection</p>
             </div>
         </div>
         <div class="service-item">
-            <img src="https://images.unsplash.com/photo-1508009086005-1d2023d1b19d?ixid=M3wzNjM5Nzd8MHwxfHNlYXJjaHwxfHxiaW4lMjBtb25pdG9yeXxlbnwwfHx8fDE3MTc3NDY1ODd8MA&ixlib=rb-4.0.3&w=1000" alt="Cloud analytics"[[7]]>
+            <i class="fas fa-cloud"></i>
             <div>
-                <h3>Cloud Analytics</h3>
-                <p>Advanced data visualization and predictive maintenance alerts</p>
+                <h3>Cloud Monitoring</h3>
+                <p>Remote management and data analysis through secure cloud platforms</p>
             </div>
         </div>
         <div class="service-item">
-            <img src="https://images.unsplash.com/photo-1580059287930-5e0a1d3200f4?ixid=M3wzNjM5Nzd8MHwxfHNlYXJjaHwxfHxiaW4lMjBtb25pdG9yeXxlbnwwfHx8fDE3MTc3NDY1OTl8MA&ixlib=rb-4.0.3&w=1000" alt="Mobile app"[[8]]>
+            <i class="fas fa-mobile-alt"></i>
             <div>
                 <h3>Mobile Apps</h3>
-                <p>24/7 access to water usage insights and emergency alerts</p>
+                <p>On-the-go access to water usage analytics and system alerts</p>
             </div>
         </div>
     </section>
 
-    <section class="target-market container" id="markets">
+    <section class="target-market container">
         <h2>Our Markets</h2>
+        <p>Serving all sectors through three core models:</p>
         <div class="market-types">
             <div class="market-type">
-                <img src="https://images.unsplash.com/photo-1551214012-84d0c7a5b8f1?ixid=M3wzNjM5Nzd8MHwxfHNlYXJjaHwxfHxiaW4lMjBtb25pdG9yeXxlbnwwfHx8fDE3MTc3NDY2MzF8MA&ixlib=rb-4.0.3&w=1000" alt="Home"[[9]]>
-                <h3>Residential</h3>
-                <p>Smart home leak detection systems</p>
+                <i class="fas fa-home"></i>
+                <h3>Homeowners</h3>
+                <p>Protect your property with smart leak detection</p>
             </div>
             <div class="market-type">
-                <img src="https://images.unsplash.com/photo-1580059287930-5e0a1d3200f4?ixid=M3wzNjM5Nzd8MHwxfHNlYXJjaHwxfHxiaW4lMjBtb25pdG9yeXxlbnwwfHx8fDE3MTc3NDY1OTl8MA&ixlib=rb-4.0.3&w=1000" alt="Commercial building"[[8]]>
-                <h3>Commercial</h3>
-                <p>Enterprise-grade water management solutions</p>
+                <i class="fas fa-building"></i>
+                <h3>Businesses</h3>
+                <p>Optimize water usage and reduce operational costs</p>
             </div>
             <div class="market-type">
-                <img src="https://images.unsplash.com/photo-1508009086005-1d2023d1b19d?ixid=M3wzNjM5Nzd8MHwxfHNlYXJjaHwxfHxiaW4lMjBtb25pdG9yeXxlbnwwfHx8fDE3MTc3NDY1ODd8MA&ixlib=rb-4.0.3&w=1000" alt="City infrastructure"[[7]]>
+                <i class="fas fa-university"></i>
                 <h3>Government</h3>
-                <p>City-wide smart water infrastructure</p>
+                <p>Smart city integration for municipal water management</p>
             </div>
         </div>
     </section>
 
     <section class="revenue-model container">
-        <h2>Pricing Models</h2>
-        <p>Flexible options tailored to your needs:</p>
+        <h2>Our Service Model</h2>
+        <p>Flexible pricing options for all clients:</p>
         <ul>
-            <li>Monthly subscription plans</li>
-            <li>Pay-as-you-go sensor networks</li>
-            <li>Custom enterprise agreements</li>
+            <li>Subscription-based monitoring plans</li>
+            <li>Pay-per-use sensor networks</li>
+            <li>Enterprise-level service agreements</li>
         </ul>
     </section>
 
     <section class="contact" id="contact">
         <div class="container">
-            <h2>Get in Touch</h2>
+            <h2>Contact Us</h2>
             <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Message..." rows="4"></textarea>
-                <button type="submit">Send Message</button>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message"></textarea>
+                <button type="submit">Send</button>
             </form>
         </div>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2024 Aqua Sentinel. All rights reserved.</p>
-        <div>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
+        <p>&copy; 2023 Aqua Sentinel. All rights reserved.</p>
     </footer>
 </body>
 </html>
