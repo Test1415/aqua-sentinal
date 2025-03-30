@@ -8,7 +8,9 @@
 -->
 
 # GitHub Pages
-https://test1415.github.io/aqua-sentinal
+
+_Create a site or blog from your GitHub repositories with GitHub Pages._
+
 </header>
 
 <!--

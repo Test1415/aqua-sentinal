@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Sentinel - Water Flow Sensor</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.8), rgba(52, 152, 219, 0.8));
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a.active, nav a:hover {
+            color: #3498db;
+        }
+
+        nav img {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        nav h2 {
+            position: relative;
+            left: 12%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative; /* Added for image layering */
+            /* Local hero image */
+            background-size: cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/water-sensor.jpg') center;
+            color: white;
+            padding: 150px 20px;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background: #007bff;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #0056b3;
+        }
+
+        /* Product Details */
+        .product-details {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .feature h3 {
+            margin-bottom: 1rem;
+        }
+
+        .feature p {
+            color: #666;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 4rem auto;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .price-details {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .product-details {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" alt="Aqua Sentinel">
+            <h2>Aqua Sentinel</h2>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About Us</a>
+                <a href="cloud.html">Cloud</a>
+                <a href="hardware-sensors.html">Hardware</a>
+                <a href="contact-us.html" class="active">Contact Us</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Water Flow Sensor (Basic)</h1>
+    <p>Real-time monitoring for efficient water management</p>
+</section>
+
+<!-- Product Details -->
+<section class="product-details">
+    <div class="feature">
+        <h3>Key Features</h3>
+        <p>• Real-time flow rate measurement<br>
+            • Leak detection alerts<br>
+            • IP68 waterproof rating<br>
+            • Easy installation</p>
+    </div>
+    <div class="feature">
+        <h3>Technical Specs</h3>
+        <p>• Accuracy: ±2%<br>
+            • Operating Temp: -20°C to 60°C<br>
+            • Power: Battery-operated (2 years life)<br>
+            • Compatibility: Aqua Sentinel Cloud Platform</p>
+    </div>
+    <div class="feature">
+        <h3>Benefits</h3>
+        <p>• Reduce water waste by up to 30%<br>
+            • Prevent infrastructure damage<br>
+            • Lower maintenance costs<br>
+            • Scalable for residential/commercial use</p>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing">
+    <div class="price-tag">$240</div>
+    <div class="price-details">Per unit</div>
+    <a href="shopping-page.html" button class="cta-button">Purchase</a>
+</section>

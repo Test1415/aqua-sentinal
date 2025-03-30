@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aqua Sentinel - Purchase Hardware Sensors</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('images/water_texture2336.jpg') center/cover no-repeat;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: linear-gradient(135deg, rgba(44, 62, 80, 0.8), rgba(52, 152, 219, 0.8));
+      padding: 15px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a.active, nav a:hover {
+      color: #3498db;
+    }
+
+    nav img {
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    nav h2 {
+      position: relative;
+      left: 12%;
+    }
+
+    /* Main Content */
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .purchase-container {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 3rem;
+      border-radius: 12px;
+      width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      background: #333;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .submit-button {
+      background: #007bff;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+
+    .submit-button:hover {
+      background: #0056b3;
+    }
+
+    /* Thank You Screen */
+    .thank-you-screen {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 10000;
+    }
+
+    .thank-you-screen.active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .thank-you-text {
+      color: white;
+      text-align: center;
+      max-width: 400px;
+    }
+
+    .loader {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #3498db;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .shopping-container {
+        width: 90%;
+        left: 5%;
+        grid-template-columns: 1fr;
+      }
+      .product-image {
+        height: 300px;
+      }
+    }    @media (max-width: 768px) {
+      .purchase-container {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Transition Screen -->
+<div class="thank-you-screen">
+  <div class="loader"></div>
+  <div class="thank-you-text">
+    <h2>Thank You!</h2>
+    <p>We'll contact you shortly regarding your inquiry</p>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <nav>
+    <img src="images/logo.png" alt="Aqua Sentinel">
+    <h2>Aqua Sentinel</h2>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about-us.html">About Us</a>
+      <a href="cloud.html">Cloud</a>
+      <a href="hardware-sensors.html">Hardware</a>
+      <a href="contact-us.html" class="active">Contact Us</a>
+    </div>
+  </nav>
+</header>>
+<main>
+  <div class="purchase-container">
+    <h2>Shopping Page</h2>
+    <form id="purchaseForm">
+      <div class="form-group">
+        <input type="text" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <input type="tel" placeholder="Phone Number" required>
+      </div>
+      <div class="form-group">
+        <select required>
+          <option value="water_flow">Water Flow Sensor - $240</option>
+          <option value="cloud">Cloud Monitoring - $1400 (Annual)</option>
+        </select>
+      </div>
+      <button type="submit" class="submit-button">Request Purchase</button>
+    </form>
+  </div>
+
+  <script>
+    // Ensure the overlay starts hidden
+    const thankYouScreen = document.querySelector('.thank-you-screen');
+
+    document.getElementById('purchaseForm').addEventListener('submit', (e) => {
+      e.preventDefault(); // Prevent immediate form submission
+
+      // Show the overlay only after form submission
+      thankYouScreen.classList.add('active');
+
+      // Simulate processing time
+      setTimeout(() => {
+        // Hide the form and show final message
+        document.querySelector('.purchase-container').style.display = 'none';
+        thankYouScreen.innerHTML = `
+                    <div class="loader"></div>
+                    <div class="thank-you-text">
+                        <h2>Thank You!</h2>
+                        <p>We'll contact you shortly regarding your inquiry</p>
+                    </div>
+                `;
+
+        // Optional redirect after 3 seconds
+        setTimeout(() => {
+          document.querySelector('.purchase-container').style.display = 'grid';
+          thankYouScreen.style.display = 'none';
+        }, 3000);
+      }, 500); // Short delay to show the loader
+    });
+  </script>
+</main>
